@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  .birthday-image {
+  position: relative;
+  z-index: 1; /* thấp hơn bong bóng */
+}
+</style>
+<link rel="stylesheet" href="style.css">
+<title>Birthday</title>
+</head>
+<body>
+  <div id="popup">
+    <div class="popup-content">
+      <img src="images/tl.webp" alt="Chúc mừng sinh nhật" class="popup-gif">
+      <h2>🎂 Chúc mừng sinh nhật 🎉</h2>
+      <button id="closePopup">Vào trang chính</button>
+    </div>
+  </div>
+
+    <button onclick="alert('Không có gì đâu, chỉ là chúc ông sinh nhật vui vẻ lần nữa thôi \:) 🎉')">Bấm vào đây</button>
+<audio id="birthday-audio" autoplay loop muted>
+  <source src="audio/SSvid.net--Happy-Birthday-Piano-Version.mp3" type="audio/mpeg">
+</audio>
+
+ <button onclick="playMusic()">🎶 Bật nhạc</button>
+  
+    <h1>Chúc mừng sinh nhật</h1>
+    <p>chúc ông một tuổi mới thật vui vẻ, hạnh phúc bên những người yêu thương</p>
+    <p>Đồng thời ngày càng thành công hơn trong cuộc sống nhé</p>
+    <p>Cảm ơn ông thời gian qua đã giúp đỡ tôi rất nhiều, sinh nhật vui vẻ nha</p>
+    <img class="birthday-image" src="images/81hwYi+mnpL.jpg" alt="Birthday" width="500" height="350" >
+    <div class="balloon-container">
+        <img src="images/lovepik-decorative-balloon-png-image_401514766_wh860 (1).png" class="balloon" alt="balloon">
+        <img src="images/lovepik-decorative-balloon-png-image_401514766_wh860 (1).png" class="balloon" alt="balloon">
+        <img src="images/download (1).png" class="balloon" alt="balloon">
+        <img src="images/download (1).png" class="balloon" alt="balloon">
+    </div>
+
+     <script>
+    function playMusic() {
+      var audio = document.getElementById("birthday-audio");
+      audio.muted = false; 
+      audio.play();        
+    }
+  </script>
+
+  <script>
+    document.getElementById("closePopup").addEventListener("click", function() {
+    document.getElementById("popup").style.display = "none";
+    document.getElementById("mainContent").style.display = "block";
+    });
+</script>
+  
+</body>
+</html> 
