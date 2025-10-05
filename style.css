@@ -63,8 +63,18 @@ p{
   }
 }
 .birthday-image {
-  position: relative;
-  z-index: 1; /* thấp hơn bong bóng */
+  display: block;
+  margin: 20px auto;
+  width: 800px;
+  height: 80vh;           
+  border-radius: 20px;        
+  box-shadow: 0 0 20px gold;  
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.birthday-image:hover {
+  transform: scale(1.05);     
+  box-shadow: 0 0 40px orange; 
 }
 
 #popup {
@@ -87,11 +97,12 @@ p{
       animation: popupAnim 1s ease-in-out;
     }
     .popup-gif {
-      width: 200px;
+      width: 400px;   /* hoặc 500px tùy bạn muốn to cỡ nào */
+      max-width: 90%; /* đảm bảo không vượt quá màn hình */
       margin-bottom: 15px;
     }
     @keyframes popupAnim {
-      from { transform: scale(0.5); opacity: 0; }
+      from { transform: scale(0.3); opacity: 0; }
       to { transform: scale(1); opacity: 1; }
     }
 
